@@ -39,7 +39,7 @@ public abstract class Airport {
 
     @Override
     public String toString() {
-        return "Aeropuerto: '" + name + "'. Año de inauguración: " + inaugurationYear + ". Capacidad: " + capacity + ". ";
+        return "Aeropuerto: '" + name + "(" + id + ")'. Año de inauguración: " + inaugurationYear + ". Capacidad: " + capacity + ". ";
     }
 
 }
