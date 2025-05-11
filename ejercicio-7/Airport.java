@@ -35,7 +35,7 @@ public abstract class Airport {
         this.capacity = capacity;
     }
 
-    public abstract void totalEarnings();
+    public abstract void totalEarnings(int quantity);
 
     @Override
     public String toString() {
