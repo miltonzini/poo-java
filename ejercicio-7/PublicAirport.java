@@ -36,7 +36,7 @@ public class PublicAirport extends Airport{
 
     @Override
     public String toString() {
-        return super.toString() + "financiación: " + financing + ". Empleados discapacitados: " + handicapEmployees + ". ";        
+        return super.toString() + "Financiación: " + financing + ". Empleados discapacitados: " + handicapEmployees + ". ";        
     }
     
 }
