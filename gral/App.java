@@ -31,13 +31,21 @@ public class App {
 
 
         // Probando Herencia
-        Employee employee1 = new Employee("Fernando", "Díaz", 42, 2000, address1);
-        Manager manager1 = new Manager("Sebastián", "Díaz", 42, 2000, address2, "Sales");
+        // Employee employee1 = new Employee("Fernando", "Díaz", 42, 2000, address1);
+        // Manager manager1 = new Manager("Sebastián", "Díaz", 42, 2000, address2, "Sales");
 
-        System.out.println(employee1);
-        System.out.println(manager1);
-        System.out.println(manager1.getDepartment());
+        // System.out.println(employee1);
+        // System.out.println(manager1);
+        // System.out.println(manager1.getDepartment());
 
+        
+        // Probando Interfaces
+        Circle firstCircle = new Circle(5);
+        Square firstSquare = new Square(5);
 
+        System.out.println("Area firstCircle: " + firstCircle.calculateArea());
+        System.out.println("Perímetro firstCircle: " + firstCircle.calculatePerimeter());
+        System.out.println("Area firstSquare: " + firstSquare.calculateArea());
+        System.out.println("Perímetro firstSquare: " + firstSquare.calculatePerimeter());
     }
 }
