@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public abstract class Person {
+public abstract class Person implements Comparable<Person> {
     public static int personsCount = 0; // Atributo estático
 
     private String name;
@@ -108,6 +108,17 @@ public abstract class Person {
             return false;
         }
         return Objects.equals(this.surname, other.surname);
+    }
+
+    @Override
+    public int compareTo(Person o) {
+        if (this.age < o.age) {
+            return -1;
+        } else if (this.age > o.age) {
+            return 1;            
+        } else {            
+            return 0;
+        }
     }
     
 }
