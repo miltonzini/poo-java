@@ -1,7 +1,7 @@
 public class App {
     public static void main(String[] args) {
-        Address address1 = new Address("Calle falsa", 123, "Morón", "Buenos Aires");
-        Address address2 = new Address("Calle falsa", 567, "Haedo", "Buenos Aires");
+        // Address address1 = new Address("Calle falsa", 123, "Morón", "Buenos Aires");
+        // Address address2 = new Address("Calle falsa", 567, "Haedo", "Buenos Aires");
 
         // Person p = new Person("Juan", "Díaz", 35, address1);
         // Person q = new Person("Pedro", "Díaz", 10, address2);
@@ -40,12 +40,34 @@ public class App {
 
         
         // Probando Interfaces
-        Circle firstCircle = new Circle(5);
-        Square firstSquare = new Square(5);
+        // Circle firstCircle = new Circle(5);
+        // Square firstSquare = new Square(5);
 
-        System.out.println("Area firstCircle: " + firstCircle.calculateArea());
-        System.out.println("Perímetro firstCircle: " + firstCircle.calculatePerimeter());
-        System.out.println("Area firstSquare: " + firstSquare.calculateArea());
-        System.out.println("Perímetro firstSquare: " + firstSquare.calculatePerimeter());
+        // System.out.println("Area firstCircle: " + firstCircle.calculateArea());
+        // System.out.println("Perímetro firstCircle: " + firstCircle.calculatePerimeter());
+        // System.out.println("Area firstSquare: " + firstSquare.calculateArea());
+        // System.out.println("Perímetro firstSquare: " + firstSquare.calculatePerimeter());
+
+        // Probando Arrays de objetos y InstanceOf
+        Person[] persons = {
+            new Employee("Juan", "Pérez", 32, 1000),
+            new Employee("Lucas", "Pérez", 32, 1000),
+            new Employee("Esteban", "Gimenez", 33, 1000),
+            new Manager("Fernando", "Díaz", 50, 2000, "Marketing"),
+            new Manager("Mariano", "Pérez", 46, 2000, "Software Development")
+        };
+
+        int employeesCount = 0;
+        int managersCount = 0;
+        for (Person person : persons) {
+            if (person instanceof Manager) {
+                managersCount++;
+            } else if (person instanceof Employee) {
+                employeesCount++;
+            }
+        }
+        System.out.println("Empleados (sin contar Managers): " + employeesCount + ".");
+        System.out.println("Managers: " + managersCount + ".");
+
     }
 }
